@@ -4,7 +4,7 @@ loadAPI(15);
 // This is useful during development.
 host.setShouldFailOnDeprecatedUse(true);
 
-host.defineController("{\\rtf1\\ansi\\ansicpg1252\\cocoartf2636", "Bitwig-Midifighter-Twister", "0.0.1", "501a7221-60e3-425e-9dc8-591e5cf505ae", "Gianfranco Cecconi");
+host.defineController("DJ TechTools", "Midi Fighter Twister", "0.0.1", "501a7221-60e3-425e-9dc8-591e5cf505ae", "Gianfranco Cecconi");
 
 host.defineMidiPorts(1, 1);
 
@@ -16,9 +16,10 @@ if (host.platformIsWindows())
 }
 else if (host.platformIsMac())
 {
-   // TODO: Set the correct names of the ports for auto detection on Mac OSX platform here
-   // and uncomment this when port names are correct.
-   // host.addDeviceNameBasedDiscoveryPair(["Input Port 0"], ["Output Port 0"]);
+    host.addDeviceNameBasedDiscoveryPair (["Midi Fighter Twister"], ["Midi Fighter Twister"]);
+    host.addDeviceNameBasedDiscoveryPair (["Midi Fighter Twister #2"], ["Midi Fighter Twister #2"]);
+    host.addDeviceNameBasedDiscoveryPair (["Midi Fighter Twister #3"], ["Midi Fighter Twister #3"]);
+    host.addDeviceNameBasedDiscoveryPair (["Midi Fighter Twister #4"], ["Midi Fighter Twister #4"]);
 }
 else if (host.platformIsLinux())
 {
@@ -31,14 +32,13 @@ function init() {
    transport = host.createTransport();
    host.getMidiInPort(0).setMidiCallback(onMidi0);
    host.getMidiInPort(0).setSysexCallback(onSysex0);
-
-   // TODO: Perform further initialization here.
-   println("Bitwig-Midifighter-Twister initialized!");
+   println("Midi Fighter Twister initialized!");
 }
 
 // Called when a short MIDI message is received on MIDI input port 0.
 function onMidi0(status, data1, data2) {
    // TODO: Implement your MIDI input handling code here.
+   // println(status + " " + data1 + " " + data2)
 }
 
 // Called when a MIDI sysex message is received on MIDI input port 0.
