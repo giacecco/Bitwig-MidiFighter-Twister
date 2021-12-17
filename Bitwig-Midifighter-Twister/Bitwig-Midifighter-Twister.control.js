@@ -4,7 +4,7 @@ loadAPI(15);
 // This is useful during development.
 host.setShouldFailOnDeprecatedUse(true);
 
-host.defineController("DJ TechTools", "Midi Fighter Twister", "0.0.1", "501a7221-60e3-425e-9dc8-591e5cf505ae", "Gianfranco Cecconi");
+host.defineController("DJ TechTools", "Midi Fighter Twister", "0.0.2", "501a7221-60e3-425e-9dc8-591e5cf505ae", "Gianfranco Cecconi");
 
 host.defineMidiPorts(1, 1);
 
@@ -38,6 +38,8 @@ function init() {
 // Called when a short MIDI message is received on MIDI input port 0.
 function onMidi0(status, data1, data2) {
    // TODO: Implement your MIDI input handling code here.
+   // NOTE: this function is called only if Bitwig does not have any mapping
+   // configured for the respective MIDI rotary or switch!
    // println(status + " " + data1 + " " + data2)
 }
 
