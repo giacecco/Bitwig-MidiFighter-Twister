@@ -4,7 +4,13 @@ loadAPI(15);
 // This is useful during development.
 host.setShouldFailOnDeprecatedUse(true);
 
-host.defineController("DJ TechTools", "Midi Fighter Twister", "0.0.2", "501a7221-60e3-425e-9dc8-591e5cf505ae", "Gianfranco Cecconi");
+host.defineController(
+    "DJ TechTools",
+    "Midi Fighter Twister",
+    "1.0.0",
+    "501a7221-60e3-425e-9dc8-591e5cf505ae",
+    "Gianfranco Cecconi <giacecco@giacecco.com>"
+);
 
 host.defineMidiPorts(1, 1);
 
